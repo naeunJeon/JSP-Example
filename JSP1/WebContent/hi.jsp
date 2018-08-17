@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="java.util.*" errorPage="Error.jsp" isELIgnored="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.*" errorPage="Error.jsp" isELIgnored="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <body>
 hi
 <%
-	int sum = 10/0;		//¿¡·¯ÄÚµå ÀÛ¼º
+	int sum = 10/0;		//ì—ëŸ¬ì½”ë“œ ìž‘ì„±
 %>
 </body>
 </html>

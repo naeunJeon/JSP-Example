@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h2>1-100 ╪Щюзг╔╫ц</h2>
+<h2>1-100 Л┬╚Л·░М▒°Л▀°</h2>
 <% 
 	for(int i=1; i<100; i++){
 %>
