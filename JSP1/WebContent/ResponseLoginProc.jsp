@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+
 	//임의적으로  id 와 pass를 설정
 	String dbid = "aaaa";
 	String dbpass = "1234";

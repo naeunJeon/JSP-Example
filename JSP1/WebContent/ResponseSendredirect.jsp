@@ -1,29 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <center>
-	<h2>·Î±×ÀÎÆäÀÌÁö</h2>
+	<h2>ë¡œê·¸ì¸íŽ˜ì´ì§€</h2>
 	<form action="ResponseLoginProc.jsp" method="post">
 		<table width="400" border="1">
 			<tr height=200>
-				<td align="Center" width="150">¾ÆÀÌµð</td>
+				<td align="Center" width="150">ì•„ì´ë””</td>
 				<td align="Left" width="250"><input type="text" name="id">
 				</td>
 			</tr>
 			<tr height=200>
-				<td align="Center" width="150">ÆÐ½º¿öµå</td>
+				<td align="Center" width="150">íŒ¨ìŠ¤ì›Œë“œ</td>
 				<td align="Left" width="250"><input type="password" name="pass">
 				</td>
 			</tr>
 			<tr height=60>
 				<td colspan="2" align="center">
-				<input type="submit" value="Àü¼Û">
+				<input type="submit" value="ì „ì†¡">
 				</td>
 			</tr>
 		</table>
