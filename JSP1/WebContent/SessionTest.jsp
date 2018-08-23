@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
-<h2>¼¼¼Ç ¿¬½À</h2>>
+<h2>ì„¸ì…˜ ì—°ìŠµ</h2>>
 <%
 	String name = "Jeon";
-	//¼¼¼ÇÀ» ÀÌ¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ À¯Áö
+	//ì„¸ì…˜ì„ ì´ìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ìœ ì§€
 	session.setAttribute("name1", name);
-	//¼¼¼ÇÀ¯Áö½Ã°£
-	session.setMaxInactiveInterval(10);	//10ÃÊ°¡ ¼¼¼ÇÀ» À¯Áö
+	//ì„¸ì…˜ìœ ì§€ì‹œê°„
+	session.setMaxInactiveInterval(10);	//10ì´ˆê°€ ì„¸ì…˜ì„ ìœ ì§€
 %>
-<a href="SessionName.jsp">¼¼¼Ç³×ÀÓÆäÀÌÁö·Î ÀÌµ¿</a>
+<a href="SessionName.jsp">ì„¸ì…˜ë„¤ìž„íŽ˜ì´ì§€ë¡œ ì´ë™</a>
 
 </body>
 </html>
