@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
 <%
-	String name = "�˸��� ����";
+	String name = "알리미 어플";
 %>
 
-��ũ��Ʈ�� ǥ���� <%= name %> �� ȭ�鿡 ���
+스크립트로 표현식 <%= name %> 이 화면에 출력
 
 <p>
 <%
-	out.println(name + " �� ȭ�鿡 ���");
+	out.println(name + " 이 화면에 출력");
 %>
 
 </body>
