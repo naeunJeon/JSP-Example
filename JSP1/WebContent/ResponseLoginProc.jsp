@@ -1,30 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <%
-	request.setCharacterEncoding("EUC-KR");
-
-	//ÀÓÀÇÀûÀ¸·Î  id ¿Í pass¸¦ ¼³Á¤
+	//ìž„ì˜ì ìœ¼ë¡œ  id ì™€ passë¥¼ ì„¤ì •
 	String dbid = "aaaa";
 	String dbpass = "1234";
 	
-	//»ç¿ëÀÚ·ÎºÎÅÍ ³Ñ¾î¿Â µ¥ÀÌÅÍ¸¦ ÀÔ·Â ¹Þ¾ÆÁÜ
+	//ì‚¬ìš©ìžë¡œë¶€í„° ë„˜ì–´ì˜¨ ë°ì´í„°ë¥¼ ìž…ë ¥ ë°›ì•„ì¤Œ
 	String id = request.getParameter("id");
 	String pass = request.getParameter("pass");
 	
 	if(dbid.equals(id) && dbpass.equals(pass)){
-		//¾ÆÀÌµð¿Í ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏ¹Ç·Î ¸ÞÀÎÆäÀÌÁö·Î ÀÌµ¿
+		//ì•„ì´ë””ì™€ íŒ¨ìŠ¤ì›Œë“œê°€ ì¼ì¹˜í•˜ë¯€ë¡œ ë©”ì¸íŽ˜ì´ì§€ë¡œ ì´ë™
 		response.sendRedirect("ResponseMain.jsp?id="+id);
 	}else{
 %>
 	<script>
-		alert("¾ÆÀÌµð¿Í ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.")
+		alert("ì•„ì´ë””ì™€ íŒ¨ìŠ¤ì›Œë“œê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.")
 		history.go(-1);
 	</script>
 <%		

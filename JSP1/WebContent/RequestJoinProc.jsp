@@ -1,21 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <body>
 <center>
-<h2>È¸¿øÁ¤º¸º¸±â</h2>
+<h2>íšŒì›ì •ë³´ë³´ê¸°</h2>
 <%
-	//post¹æ½ÄÀ¸·Î µ¥ÀÌÅÍ°¡ ³Ñ¾î¿Ã¶§ ÇÑ±ÛÀÌ ±úÁú¼ö ÀÖ±â¿¡
-	request.setCharacterEncoding("EUC-KR");
-	//°¢Á¾ »ç¿ëÀÚ·ÎºÎÅÍ ³Ñ¾î¿Â µ¥ÀÌÅÍ¸¦ ÀúÀåÇØÁÜ
+	//ê°ì¢… ì‚¬ìš©ìžë¡œë¶€í„° ë„˜ì–´ì˜¨ ë°ì´í„°ë¥¼ ì €ìž¥í•´ì¤Œ
 	String id = request.getParameter("id");
 	String pass1 = request.getParameter("pass1");
 	String pass2 = request.getParameter("pass2");
 	String email = request.getParameter("email");
 	String tel = request.getParameter("tel");
 	
-	//[]Å¸ÀÔÀ¸·Î ¸®ÅÏ
+	//[]íƒ€ìž…ìœ¼ë¡œ ë¦¬í„´
 	String[] hobby = request.getParameterValues("hobby");
 	
 	String job = request.getParameter("job");
@@ -25,8 +23,8 @@
 	if(!pass1.equals(pass2)){
 %>
 	<script type="text/javascript">
-		alert("ºñ¹Ð¹øÈ£°¡ Æ²¸³´Ï´Ù.")	;	// °æ°íÃ¢
-		history.go(-1); 			// ÀÌÀüÆäÀÌÁö·Î ÀÌµ¿
+		alert("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.")	;	// ê²½ê³ ì°½
+		history.go(-1); 			// ì´ì „íŽ˜ì´ì§€ë¡œ ì´ë™
 	</script>
 <%
 	}
@@ -34,19 +32,19 @@
 
 <table width="500" border="1">
 	<tr height="50">
-		<td width="150" align="center">¾ÆÀÌµð</td>
+		<td width="150" align="center">ì•„ì´ë””</td>
 		<td width="350" align="center"><%= id %></td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">ÀÌ¸ÞÀÏ</td>
+		<td width="150" align="center">ì´ë©”ì¼</td>
 		<td width="350" align="center"><%= email %></td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">ÀüÈ­¹øÈ£</td>
+		<td width="150" align="center">ì „í™”ë²ˆí˜¸</td>
 		<td width="350" align="center"><%= tel %></td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">°ü½ÉºÐ¾ß</td>
+		<td width="150" align="center">ê´€ì‹¬ë¶„ì•¼</td>
 		<td width="350" align="center">
 		<%
 			for(int i=0; i<hobby.length; i++){
@@ -56,15 +54,15 @@
 		</td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">Á÷¾÷</td>
+		<td width="150" align="center">ì§ì—…</td>
 		<td width="350" align="center"><%= job %></td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">¿¬·É</td>
+		<td width="150" align="center">ì—°ë ¹</td>
 		<td width="350" align="center"><%= age %></td>
 	</tr>
 		<tr height="50">
-		<td width="150" align="center">ÇÏ°í½ÍÀº¸»</td>
+		<td width="150" align="center">í•˜ê³ ì‹¶ì€ë§</td>
 		<td width="350" align="center"><%= info %></td>
 	</tr>
 </table>
