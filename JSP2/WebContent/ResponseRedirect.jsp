@@ -4,10 +4,12 @@
 <html>
 <body>
 
-ResponseRedirect.jsp 페이지 입니다.
+ResponseRedirect.jsp 페이지 입니다.<br>
 <%
 	String id = request.getParameter("id");
+	String phone = request.getParameter("phone");
 %>
-아이디 = <%=id %>
+아이디 = <%= id %><br>
+phone = <%= phone %>
 </body>
 </html>
