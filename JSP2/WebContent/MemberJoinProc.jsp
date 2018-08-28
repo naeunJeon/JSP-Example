@@ -10,11 +10,11 @@
 	<!-- 객체생성 MemberBean mbean = new MemberBean() -->
 	<jsp:useBean id="mbean" class="bean.MemberBean">
 	<!-- Jsp 내용을 자바빚 클래스(MemberBean)에 데이터를 맵핑(넣어줌) -->
-		<jsp:setProperty name="mbean" property="id"/>
+		<jsp:setProperty name="mbean" property="*"/><!-- 자동으로 모두 맵핑시켜주세요 라는  -->
 	</jsp:useBean>
 
 	<h2> 당신의 아이디는 <jsp:getProperty property="id" name="mbean"/> </h2>
-	<h2> 당신의 아이디는 <jsp:getProperty property="email" name="mbean"/> </h2>
-	<h2> 당신의 아이디는 <jsp:getProperty property="tel" name="mbean"/> </h2>
+	<h2> 당신의 이메일 <jsp:getProperty property="email" name="mbean"/> </h2>
+	<h2> 당신의 전화번호  <% mbean.getTel(); %> </h2>
 </body>
 </html>
