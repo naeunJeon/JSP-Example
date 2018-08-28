@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <body>
 
-ResponseRedirect.jsp ÆäÀÌÁö ÀÔ´Ï´Ù.<br>
+ResponseRedirect.jsp í˜ì´ì§€ ì…ë‹ˆë‹¤.<br>
 <%
 	String id = request.getParameter("id");
 	String phone = request.getParameter("phone");
 %>
-¾ÆÀÌµğ = <%= id %><br>
+ì•„ì´ë”” = <%= id %><br>
 phone = <%= phone %>
 </body>
 </html>
