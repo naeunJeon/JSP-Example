@@ -33,15 +33,15 @@
 	
 	String id = "root";
 	String pass = "12Sqecd34!";
-	String url = "jdbc:mysql://localhost:3306/test";
+	String url = "jdbc:mariadb://localhost:3306/test";
 
 	try{
 		//1.해당 데이터 베이스를 사용한다고 선언
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.mariadb.jdbc.Driver");
 		//2.해당 데이터 베이스에 접속
 		Connection conn = DriverManager.getConnection(url, id, pass);
 		String sql = "INSERT INTO MEMBER VALUES (?,?,?,?,?,?,?,?)";
-		/* PreparedStatement pstmt = conn.prepareStatement(sql);
+		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, mbean.getId());
 		pstmt.setString(2, mbean.getPass1());
 		pstmt.setString(3, mbean.getEmail());
@@ -50,7 +50,8 @@
 		pstmt.setString(6, mbean.getJob());
 		pstmt.setString(7, mbean.getAge());
 		pstmt.setString(8, mbean.getInfo());
-		 */
+		
+		pstmt.executeUpdate();
 	}catch(Exception e){
 		e.printStackTrace();
 	}
