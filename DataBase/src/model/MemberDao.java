@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 //데이터베이스에 연결하고 select, insert, update, delete 작업을 실행해주는 클래스
 public class MemberDao {
@@ -34,7 +35,7 @@ public class MemberDao {
 		try{
 			getConn();
 			String sql = "INSERT INTO MEMBER VALUES (?,?,?,?,?,?,?,?)";
-			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, mbean.getId());
 			pstmt.setString(2, mbean.getPass1());
 			pstmt.setString(3, mbean.getEmail());
@@ -51,5 +52,42 @@ public class MemberDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	//모든회원의 정보를 리턴해주는 메소드 호출
+	public ArrayList<MemberBean> allSelectMember() {
+		ArrayList<MemberBean> arr = new ArrayList<>();
+		
+		//데이터베이스는 무조건 예외처리 해야함
+		try {
+			getConn();
+			//쿼리 준비
+			String sql = "select * from member";
+			pstmt = conn.prepareStatement(sql);
+			
+			//쿼리를 실행시킨 결과를 리턴해서 받아줌
+			rs = pstmt.executeQuery();
+			
+			//반복문을 사용해서rs에 저장된 데이터를 추출해놓아야함
+			while(rs.next()) {//저장된 데이터 만큼까지 반복문을 돌리겠다라는 뜻
+				MemberBean bean  = new MemberBean();	//컬럼으로 나뉘어진 데이터를 빈클래스에 저장
+				bean.setId(rs.getString(1));
+				bean.setPass1(rs.getString(2));
+				bean.setEmail(rs.getString(3));
+				bean.setTel(rs.getString(4));
+				bean.setHobby(rs.getString(5));
+				bean.setJob(rs.getString(6));
+				bean.setAge(rs.getString(7));
+				bean.setInfo(rs.getString(8));
+				
+				arr.add(bean);
+			}
+			//자원 반납
+			conn.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		//다저장된 리스트를 반환
+		return arr;
 	}
 }
