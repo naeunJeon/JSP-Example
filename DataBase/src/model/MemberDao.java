@@ -114,9 +114,46 @@ public class MemberDao {
 				bean.setInfo(rs.getString(8));
 			}
 			// ÀÚ¿ø ¹Ý³³
+			conn.close();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		return bean;
+	}
+	
+	public String getPass(String id) {
+		String pass = "";
+		try {
+			getConn();
+			String sql = "select pass1 from member where id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				pass = rs.getString("pass1");
+			}
+			conn.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return pass;
+	}
+	
+	public void updateMember(MemberBean bean) {
+		getConn();
+		
+		try {
+			String sql = "update member set email=?, tel=? where id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bean.getEmail());
+			pstmt.setString(2, bean.getTel());
+			pstmt.setString(3, bean.getId());
+			
+			pstmt.executeUpdate();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
 	}
 }
