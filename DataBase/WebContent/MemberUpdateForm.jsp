@@ -31,7 +31,7 @@
 	</tr>
 	<tr height="50">
 		<td align="center" width="150"> 패스워드 </td>
-		<td width="250"><input type="password" name="pass"></td>
+		<td width="250"><input type="password" name="pass1"></td>
 	</tr>
 	<tr height="50">
 		<td align="center" colspan="2">

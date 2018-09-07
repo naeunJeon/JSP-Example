@@ -16,7 +16,6 @@
 	MemberDao mdao = new MemberDao();
 	
 	String pass = mdao.getPass(id);
-
 	if(bean.getPass1().equals(pass)){
 		mdao.updateMember(bean);
 		response.sendRedirect("MemberList.jsp");
