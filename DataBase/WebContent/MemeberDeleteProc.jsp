@@ -16,7 +16,7 @@
 	
 	String pass = mdao.getPass(bean.getId());
 	if(bean.getPass1().equals(pass)){
-		mdao.updateMember(bean);
+		mdao.deleteMember(bean.getId());
 		response.sendRedirect("MemberList.jsp");
 	}else{
 %>
