@@ -16,11 +16,9 @@
 	session.setAttribute("pass", pass);
 	
 	session.setMaxInactiveInterval(60*3);
-	
+	response.sendRedirect("SessionMain.jsp");
 %>
 
-<h2> 당신의 id는 <%= id %> password는 <%= pass %> 입니다. </h2>
-<a href="SessionLoginProc2.jsp"> 다음페이지로 이동 </a>
 
 </body>
 </html>

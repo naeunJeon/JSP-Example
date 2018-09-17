@@ -18,7 +18,7 @@
 		<!-- top -->
 		<tr height="150">
 			<td align="center" colspan="2">
-			<jsp:include page="Top.jsp">
+			<jsp:include page="Top.jsp"/>
 			</td>
 		</tr>
 		
@@ -30,7 +30,7 @@
 		
 		<!-- center -->
 			<td align="center" width="600">
-			<jsp:include page=<%=center%>/>
+			<jsp:include page="<%=center %>"/>
 			</td>
 		</tr>
 		
